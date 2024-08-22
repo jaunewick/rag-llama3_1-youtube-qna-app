@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "9fd79f1031043c9207787eafe8ed7997a70d7b108b98334badf25913c3e74c17"
+            "sha256": "be724bde1670bded70f199bae7de8987e0d5d0d56b4f499d6cf820e862990279"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -539,6 +539,15 @@
             "markers": "python_version < '4.0' and python_full_version >= '3.8.1'",
             "version": "==0.1.22"
         },
+        "langchain-pinecone": {
+            "hashes": [
+                "sha256:3fd23929d7d9653aeab9daeff5f324f3472feb0ac541778219fb52efcf9a88f3",
+                "sha256:de4f88d690b28f629ef9cadb0af9b32819df4bd12171f75495f5339b7d87ae5b"
+            ],
+            "index": "pypi",
+            "markers": "python_version < '3.13' and python_full_version >= '3.8.1'",
+            "version": "==0.1.3"
+        },
         "langchain-text-splitters": {
             "hashes": [
                 "sha256:1c80d4b11b55e2995f02d2a326c0323ee1eeff24507329bb22924e420c782dff",
@@ -951,6 +960,31 @@
             ],
             "markers": "python_version >= '3.8'",
             "version": "==24.1"
+        },
+        "pinecone-client": {
+            "hashes": [
+                "sha256:11c33ff5d1c38a6ce69e69fe532c0f22f312fb28d761bb30b3767816d3181d64",
+                "sha256:c8f7835e1045ba84e295f217a8e85573ffb80b41501bbc1af6d92c9631c567a7"
+            ],
+            "index": "pypi",
+            "markers": "python_version >= '3.8' and python_version < '4.0'",
+            "version": "==5.0.1"
+        },
+        "pinecone-plugin-inference": {
+            "hashes": [
+                "sha256:bbdfe5dba99a87374d9e3315b62b8e1bbca52d5fe069a64cd6b212efbc8b9afd",
+                "sha256:c6519ba730123713a181c010f0db9d6449d11de451b8e79bec4efd662b096f41"
+            ],
+            "markers": "python_version >= '3.8' and python_version < '4.0'",
+            "version": "==1.0.3"
+        },
+        "pinecone-plugin-interface": {
+            "hashes": [
+                "sha256:875857ad9c9fc8bbc074dbe780d187a2afd21f5bfe0f3b08601924a61ef1bba8",
+                "sha256:b8e6675e41847333aa13923cc44daa3f85676d7157324682dc1640588a982846"
+            ],
+            "markers": "python_version >= '3.8' and python_version < '4.0'",
+            "version": "==0.0.7"
         },
         "pydantic": {
             "hashes": [
@@ -1427,7 +1461,7 @@
                 "sha256:04e5ca0351e0f3f85c6853954072df659d0d13fac324d0072316b67d7794700d",
                 "sha256:1a7ead55c7e559dd4dee8856e3a88b41225abfe1ce8df57b7c13915fe121ffb8"
             ],
-            "markers": "python_version < '3.13'",
+            "markers": "python_version >= '3.8'",
             "version": "==4.12.2"
         },
         "typing-inspect": {
@@ -1442,7 +1476,7 @@
                 "sha256:a448b2f64d686155468037e1ace9f2d2199776e17f0a46610480d311f73e3472",
                 "sha256:dd505485549a7a552833da5e6063639d0d177c04f23bc3864e41e5dc5f612168"
             ],
-            "markers": "python_version >= '3.8'",
+            "markers": "python_version >= '3.12' and python_version < '4.0'",
             "version": "==2.2.2"
         },
         "yarl": {

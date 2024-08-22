@@ -13,6 +13,8 @@ pydantic = "*"
 pytube = "*"
 openai-whisper = {git = "git+https://github.com/openai/whisper.git"}
 pytubefix = "*"
+pinecone-client = "*"
+langchain-pinecone = "*"
 
 [dev-packages]
 ipykernel = "*"
