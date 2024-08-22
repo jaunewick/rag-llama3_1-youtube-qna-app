@@ -10,7 +10,7 @@ Below is an overview of the RAG architecture used in this project.
 
 ![RAG architecture](.img/rag_overview.png)
 
-## Upcomming Features...
+## Upcoming Features...
 
 I’m currently working on turning this application into a RESTful API, making it easier to integrate with other services and platforms.
 
