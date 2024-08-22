@@ -11,6 +11,8 @@ langchain-community = "*"
 docarray = "*"
 pydantic = "*"
 pytube = "*"
+openai-whisper = {git = "git+https://github.com/openai/whisper.git"}
+pytubefix = "*"
 
 [dev-packages]
 ipykernel = "*"
