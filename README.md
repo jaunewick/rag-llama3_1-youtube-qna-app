@@ -2,7 +2,7 @@
 
 A powerful Retrieval-Augmented Generation (RAG) application built from scratch using Langchain, Ollama, and Pinecone. 
 
-This app allows users to interact with any YouTube video (even those over 3 hours long) by asking questions and receiving responses.
+This app allows users to interact with any YouTube video (even those over 3 hours long) by asking questions and receiving answers.
 
 ## Architecture
 
