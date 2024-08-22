@@ -4,7 +4,7 @@ A powerful Retrieval-Augmented Generation (RAG) application built from scratch u
 
 This app allows users to interact with any YouTube video (even those over 3 hours long) by asking questions and receiving answers.
 
-## Architecture
+## RAG Architecture
 
 Below is an overview of the RAG architecture used in this project.
 
