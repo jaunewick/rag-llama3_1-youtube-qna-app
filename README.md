@@ -1,6 +1,6 @@
 # rag-llama3_1-youtube-qna-app
 
-A cool and interesting RAG (Retrieval-Augmented Generation) application built from scratch using Langchain, Ollama, and Pinecone. 
+A powerful RAG (Retrieval-Augmented Generation) application built from scratch using Langchain, Ollama, and Pinecone. 
 
 This app allows users to interact with any YouTube video (even those over 3 hours long) by asking questions and receiving answers.
 
