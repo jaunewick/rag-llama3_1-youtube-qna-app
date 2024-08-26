@@ -17,6 +17,7 @@ pinecone-client = "*"
 langchain-pinecone = "*"
 fastapi = {extras = ["standard"], version = "*"}
 sqlalchemy = "*"
+pymysql = "*"
 
 [dev-packages]
 ipykernel = "*"
