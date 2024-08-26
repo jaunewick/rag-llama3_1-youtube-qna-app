@@ -13,8 +13,11 @@ pydantic = "*"
 pytube = "*"
 openai-whisper = {git = "git+https://github.com/openai/whisper.git"}
 pytubefix = "*"
-pinecone-client = "*"
 langchain-pinecone = "*"
+fastapi = {extras = ["standard"], version = "*"}
+sqlalchemy = "*"
+pymysql = "*"
+pinecone-client = {extras = ["grpc"], version = "*"}
 
 [dev-packages]
 ipykernel = "*"
