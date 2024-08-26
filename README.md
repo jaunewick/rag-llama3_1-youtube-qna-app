@@ -11,7 +11,9 @@ Below is an overview of the RAG architecture used in this project.
 ![RAG architecture](.img/rag_overview.png)
 
 ## Upcoming Features...
+I’m currently working on turning this notebook into a full-stack application.
 
-I’m currently working on turning this application into a RESTful API, making it easier to integrate with other services and platforms.
+- [X] Turn the notebook into a RESTful API (FastAPI + MySQL)
+- [ ] Create a web client (React)
 
 🚧🏗️👷 In the process of developing...
