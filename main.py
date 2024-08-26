@@ -10,6 +10,7 @@ models.Base.metadata.create_all(bind=engine)
 
 class VideoBase(BaseModel):
     title: str
+    url: str
 
 class QuestionBase(BaseModel):
     video_id: str

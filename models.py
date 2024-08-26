@@ -6,6 +6,7 @@ class Video(Base):
     __tablename__ = 'videos'
     id = Column(Integer, primary_key=True)
     title = Column(String(255), nullable=False)
+    url = Column(String(255), nullable=False)
     questions = relationship('Question', backref='video')
 
 class Question(Base):
