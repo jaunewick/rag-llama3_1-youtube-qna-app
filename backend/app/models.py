@@ -1,6 +1,6 @@
 from sqlalchemy import Column, Integer, String, Text, ForeignKey
 from sqlalchemy.orm import relationship
-from database import Base
+from backend.app.database import Base
 
 class Video(Base):
     __tablename__ = 'videos'
