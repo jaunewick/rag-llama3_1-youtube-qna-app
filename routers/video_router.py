@@ -4,7 +4,7 @@ from typing import Annotated
 import models
 from database import SessionLocal
 from sqlalchemy.orm import Session
-
+from langchain_app import store_into_pinecone, delete_index_pinecone
 router = APIRouter()
 
 class VideoBase(BaseModel):
@@ -25,6 +25,11 @@ async def create_video(video: VideoBase, db: db_dependency):
     db_video = models.Video(**video.model_dump())
     db.add(db_video)
     db.commit()
+    store_into_pinecone(video.url)
+    db_video = db.query(models.Video).filter(models.Video.id == db_video.id).first()
+    return {
+        "video": db_video
+    }
 
 @router.get("/videos/{video_id}", status_code=status.HTTP_200_OK)
 async def read_video(video_id: int, db: db_dependency):
@@ -58,4 +63,5 @@ async def delete_video(video_id: int, db: db_dependency):
         db.delete(question)
     db.delete(video)
     db.commit()
+    delete_index_pinecone()
     return {"message": "Video deleted successfully"}

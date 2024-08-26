@@ -4,6 +4,7 @@ from typing import Annotated
 import models
 from database import SessionLocal
 from sqlalchemy.orm import Session
+from langchain_app import answer_question
 
 router = APIRouter()
 
@@ -29,10 +30,12 @@ async def create_question(question: QuestionBase, db: db_dependency):
     db_question = models.Question(**question.model_dump())
     db.add(db_question)
     db.commit()
-    answer_text = "blah"
+    answer_text = answer_question(question=db_question.question_text)
     db_answer = models.Answer(question_id=db_question.id, answer_text=answer_text)
     db.add(db_answer)
     db.commit()
+    db_question = db.query(models.Question).filter(models.Question.id == db_question.id).first()
+    db_answer = db.query(models.Answer).filter(models.Answer.id == db_answer.id).first()
     return {
         "question": db_question,
         "answer": db_answer
