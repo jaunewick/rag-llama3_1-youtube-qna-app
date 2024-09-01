@@ -94,6 +94,8 @@ def store_into_pinecone(video_url):
         PineconeVectorStore.from_documents(documents, embeddings, index_name=INDEX_NAME)
 
 def delete_index_pinecone():
+    # if os.path.exists("ytb_transcript.txt"):
+    #     os.remove("ytb_transcript.txt")
     if INDEX_NAME in pc.list_indexes().names():
         pc.delete_index(INDEX_NAME)
 
