@@ -20,7 +20,7 @@ This app allows users to interact with any YouTube video (even those over 3 hour
 
 - **iPhone 15 Pro Max - 430 x 1197**
 
-![](.img/mobileapp_v5.png)
+![](.img/mobileapp_v6.png)
 
 ## RAG Architecture
 
