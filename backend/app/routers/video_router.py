@@ -5,6 +5,7 @@ import backend.app.models as models
 from backend.app.database import SessionLocal
 from sqlalchemy.orm import Session
 from backend.app.langchain_app import store_into_pinecone, delete_index_pinecone
+import os
 router = APIRouter()
 
 class VideoBase(BaseModel):
@@ -25,6 +26,7 @@ async def create_video(video: VideoBase, db: db_dependency):
     db_video = models.Video(**video.model_dump())
     db.add(db_video)
     db.commit()
+    print(f"Saved video_id: {db_video.id}")
     store_into_pinecone(video.url)
     db_video = db.query(models.Video).filter(models.Video.id == db_video.id).first()
     return {
@@ -64,4 +66,13 @@ async def delete_video(video_id: int, db: db_dependency):
     db.delete(video)
     db.commit()
     delete_index_pinecone()
+
+    transcript_path = os.path.join(os.path.dirname(__file__), '../../ytb_transcript.txt')
+    transcript_path = os.path.abspath(transcript_path)
+    if os.path.exists(transcript_path):
+        try:
+            os.remove(transcript_path)
+            print(f"Deleted transcript file: {transcript_path}")
+        except Exception as e:
+            print(f"Error deleting transcript file: {e}")
     return {"message": "Video deleted successfully"}
