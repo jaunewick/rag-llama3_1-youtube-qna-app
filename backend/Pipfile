@@ -12,12 +12,13 @@ docarray = "*"
 pydantic = "*"
 pytube = "*"
 openai-whisper = {git = "git+https://github.com/openai/whisper.git"}
-pytubefix = "*"
 langchain-pinecone = "*"
 fastapi = {extras = ["standard"], version = "*"}
 sqlalchemy = "*"
 pymysql = "*"
 pinecone-client = {extras = ["grpc"], version = "*"}
+urllib3 = "*"
+pytubefix = "*"
 
 [dev-packages]
 ipykernel = "*"
